@@ -1,4 +1,8 @@
 /*
+  dgom
+  2014-01-03
+  Adaptations for Raspberry Pi using WiringPi library to handle GPIO.
+  
   Joakim Wesslen
   2012-04-24
 
@@ -9,18 +13,6 @@
   
 */
 #include "tx433_proove.h"
-
-extern "C" {
-  // AVR LibC Includes
-  #include <inttypes.h>
-  #include <avr/interrupt.h>
-#if defined(ARDUINO) && ARDUINO >= 100
-  #include "Arduino.h"
-#else
-  #include "WProgram.h"
-  #include <pins_arduino.h>
-#endif
-}
 
 #define RETRANSMIT  4
 
@@ -133,3 +125,4 @@ void Tx433_Proove::sendPause() {
   digitalWrite(txpin, LOW);
   delayMicroseconds(pulse_pause_low);
 }
+

@@ -1,8 +1,6 @@
 /*
  Example of using the Tx433_Proove lib.
- Usage: ./send <command>
-          or 
-		./send <transmitterCode> <channelCode> <command> (de-comment/comment appropriate lines)
+ Usage: ./send <transmitterCode> <channelCode> <command> (de-comment/comment appropriate lines)
  Command is 0 for OFF and 1 for ON
  */
 
@@ -19,15 +17,11 @@ int main(int argc, char *argv[]) {
      */
     int PIN = 3;
 	
-	// The transmitter unique address (you will need to chage this)
-	char *transmitterCode = "1010100101101001010101100101011001010101010101010110";
-    // The transmitter channel (might need to change this)
-	char *channelCode="0101";
-	int command  = atoi(argv[1]);
-	
-    //char* transmitterCode = argv[1];
-    //int channelCode = atoi(argv[2]);
-    //int command  = atoi(argv[3]);
+    // The transmitter unique address,e.g. "1010100101101001010101100101011001010101010101010110"
+    char* transmitterCode = argv[1];
+    // The transmitter channel, e.g. "0101"
+    char* channelCode = argv[2]; 
+    int command  = atoi(argv[3]);
     
     if (wiringPiSetup () == -1) return 1;
 	printf("sending transmitterCode[%s] channelCode[%s] command[%i]\n", transmitterCode, channelCode, command);

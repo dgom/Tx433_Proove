@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
 	int command  = atoi(argv[1]);
 	
     //char* transmitterCode = argv[1];
-    //int channelCode = atoi(argv[2]);
+    //char* channelCode = argv[2];
     //int command  = atoi(argv[3]);
     
     if (wiringPiSetup () == -1) return 1;

@@ -1,4 +1,8 @@
 /*
+  dgom
+  2014-01-03
+  Adaptations for Raspberry Pi using WiringPi library to handle GPIO.
+  
   Joakim Wesslen
   2012-04-24
 
@@ -31,17 +35,31 @@
 
 */
 
+#define LIB_VERSION 1.0
+
 #ifndef TX433_PROOVE_H
 #define TX433_PROOVE_H
 
-#define LIB_VERSION 1.0
-
 #if defined(ARDUINO) && ARDUINO >= 100
-  #include "Arduino.h"
+    #include "Arduino.h"
 #else
-  #include "WProgram.h"
-  #include <pins_arduino.h>
+    #include <wiringPi.h>
+    #include <stdint.h>
+    #include <string.h>
+    #define CHANGE 1
+#ifdef __cplusplus
+extern "C"{
 #endif
+typedef uint8_t boolean;
+typedef uint8_t byte;
+
+#if !defined(NULL)
+#endif
+#ifdef __cplusplus
+}
+#endif
+#endif
+
 
 class Tx433_Proove
 {

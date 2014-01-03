@@ -1,6 +1,6 @@
 # About
 
-The original library Tx433_Proove is adapted for controlling rc remote controlled power sockets (Nexa, Proove, Anslut)
+The original library [Tx433_Proove](https://github.com/JoakimWesslen/Tx433_Proove) is adapted for controlling rc remote controlled power sockets (Nexa, Proove, Anslut)
 with the Raspberry Pi. Kudos to the projects [Tx433_Proove](https://github.com/JoakimWesslen/Tx433_Proove) and [wiringpi](https://projects.drogon.net/raspberry-pi/wiringpi).  
 I just adapted the Tx433_Proove code to use the wiringpi library instead of the library provided by the Arduino.
 
